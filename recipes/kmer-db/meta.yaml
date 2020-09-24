@@ -1,18 +1,18 @@
-{% set version = "1.6.1" %}
-{% set sha256 = "cd0fba467223019bdcadb7af71ea103f12d4ba4972fe192f9e6ae0f03d190108" %}
+{% set version = "1.7.5" %}
+{% set sha256 = "40d13ed2ba8347091e8ea27e7d068df436468254f6089ec243012abce1da44cd" %}
 
 package:
-  name: famsa
+  name: kmer-db
   version: {{ version }}
 
 build:
   number: 0
 
 source:
-  url: https://github.com/refresh-bio/FAMSA/archive/v{{ version }}.tar.gz
+  url: https://github.com/refresh-bio/kmer-db/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - fix_const_template.patch
+ # patches:
+ #   - fix_const_template.patch
 
 requirements:
   build:
@@ -21,11 +21,11 @@ requirements:
 
 test:
   commands:
-    - famsa > /dev/null
+    - kmer-db > /dev/null
 
 about:
-  home: https://github.com/refresh-bio/FAMSA
-  summary: "Algorithm for large-scale multiple sequence alignments"
+  home: https://github.com/refresh-bio/kmer-db
+  summary: "Kmer-db is a fast and memory-efficient tool for estimating evolutionary distances."
   license: GPL-3
   license_family: GPL
   license_file: LICENSE

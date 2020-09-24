@@ -1,4 +1,4 @@
 #!/bin/bash -e
-make famsa -j${CPU_COUNT} CC="${CXX}"
+make kmer-db -j${CPU_COUNT} CC="${CXX}"
 install -d "${PREFIX}/bin"
-install famsa "${PREFIX}/bin"
+install  kmer-db "${PREFIX}/bin"
